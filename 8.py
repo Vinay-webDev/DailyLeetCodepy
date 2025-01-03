@@ -41,9 +41,7 @@ queries2 = [[0,2],[0,1],[2,2]]
 class Solution:
     def vowelStrings(self, words, queries):
         vowels = set("aeiou")
-        n = len(words)
-        nums = []
-        count = 0
+        n, nums, count = len(words), [], 0
         for i in range(n):
             word = words[i]
             if word[0] in vowels and word[-1] in vowels:
@@ -68,6 +66,8 @@ sol = Solution()
 print(sol.vowelStrings(words1, queries1))   #[2, 3, 0]
 print(sol.vowelStrings(words2, queries2))   #[3, 2, 1]
 print(sol.vowelStrings(words3, queries3))   #[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+
 #✅✅✅✅✅✅✅
 
 
