@@ -12,10 +12,7 @@
 #                 count += 1
 #                 l += 1
 #                 r -= 1
-s1 = "aabca"
-s2 = "adc"
-s3 = "bbcbaba"
-s4 = "uuuuu"
+
 class Solution:
     def countPalindromicSubsequence(self, s):
         count, n = 0, len(s)
@@ -38,9 +35,32 @@ class Solution:
                     else:
                         r -= 1
         return count
+# sol = Solution()
+# print(sol.countPalindromicSubsequence(s1))  #3
+# print(sol.countPalindromicSubsequence(s2))  #0
+# print(sol.countPalindromicSubsequence(s3))  #4
+# print(sol.countPalindromicSubsequence(s3))  #2  ❌WRONG ANSWER❌
+s1 = "aabca"
+s2 = "adc"
+s3 = "bbcbaba"
+s4 = "uuuuu"       
+class Solution:
+    def countPalindromicSubsequence(self, s):
+        count, n = 0, len(s)
+        sett = set(s)
+        for mid in sett:
+            l, r = 0, n - 1
+            while l < n and s[l] != mid:
+                l += 1
+            while r >= 0 and s[r] != mid:
+                r -= 1
+            if l < r:
+                count += len(set(s[l + 1:r]))
+        return count
 sol = Solution()
 print(sol.countPalindromicSubsequence(s1))  #3
 print(sol.countPalindromicSubsequence(s2))  #0
 print(sol.countPalindromicSubsequence(s3))  #4
-print(sol.countPalindromicSubsequence(s3))  #2  ❌WRONG ANSWER❌
-            
+print(sol.countPalindromicSubsequence(s4))  #1
+
+#✅✅✅✅
