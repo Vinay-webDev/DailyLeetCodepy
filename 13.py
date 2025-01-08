@@ -16,6 +16,23 @@ class Solution:
 # print(sol.stringMatching(words4))  #['leetcode', 'od', 'am']
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+class Solution:
+    def stringMatching(self, words):
+        N = len(words)
+        res = []
+        for i in range(N):
+            for j in range(N):
+                if i != j and words[j] in words[i]:
+                    res.append(words[j])
+        return res
+# sol = Solution()
+# print(sol.stringMatching(words1))   #['hero', 'as']
+# print(sol.stringMatching(words2))   #['et', 'code']
+# print(sol.stringMatching(words3))   #[]
+# print(sol.stringMatching(words4))   #['leetcode', 'od', 'am']
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 words1 = ["mass","as","hero","superhero"]
 words2 = ["leetcode","et","code"]
 words3 = ["blue","green","bu"]
@@ -26,13 +43,21 @@ class Solution:
         res = []
         for i in range(N):
             for j in range(N):
-                if i != j and words[j] in words[i]:
+                if i == j:
+                    continue
+                if words[j] in words[i]:
                     res.append(words[j])
+                    break
         return res
 sol = Solution()
 print(sol.stringMatching(words1))   #['hero', 'as']
 print(sol.stringMatching(words2))   #['et', 'code']
 print(sol.stringMatching(words3))   #[]
 print(sol.stringMatching(words4))   #['leetcode', 'od', 'am']
+
+
+
+
+
 
 
