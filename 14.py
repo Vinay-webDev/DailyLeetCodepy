@@ -12,7 +12,7 @@ class Solution:
                 str1 = words[i]
                 length = len(str1)
                 str2 = words[j]
-                if str1 in str2[:length] and str1 in str2[-length:]:
+                if str1 == str2[:length] and str1 == str2[-length:]:
                     count += 1
         return count
 sol = Solution()
