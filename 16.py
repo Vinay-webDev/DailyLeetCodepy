@@ -24,7 +24,7 @@ class Solution:
 sol = Solution()
 print(sol.wordSubsets(words1a, words2a))  #["facebook","google","leetcode"]
 print(sol.wordSubsets(words1b, words2b))  #['apple', 'google', 'leetcode']
-print(sol.wordSubsets(words1c, words2c))  #['apple', 'google', 'leetcode']  ❌WRONG ANSWER❌
+print(sol.wordSubsets(words1c, words2c))  #[]  ❌WRONG ANSWER❌
 
 
 
