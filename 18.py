@@ -23,11 +23,37 @@ class Solution:
                 else:
                     length += 1
         return length
+# sol = Solution()
+# print(sol.minimumLength(s1))    #5
+# print(sol.minimumLength(s2))    #2
+# print(sol.minimumLength(s3))    #17
+# print(sol.minimumLength(s4))    #12
+#✅✅✅
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+#you can use Counter from collections
+s1 = "abaacbcbb"
+s2 = "aa"
+s3 = "ecdxxxxhhhhhhhhhhhhhhbbfgfujjiisssjsjjs"
+s4 = "ggggfhhfuhjsjiksjsjs"
+class Solution:
+    def minimumLength(self, s):
+        from collections import Counter
+        count = Counter(s)
+        if len(s) < 3:
+            return len(s)
+        length = 0
+        for value in count.values():
+            if value < 3:
+                length += value
+            else:
+                if value % 2 == 0:
+                    length += 2
+                else:
+                    length += 1
+        return length
 sol = Solution()
 print(sol.minimumLength(s1))    #5
 print(sol.minimumLength(s2))    #2
 print(sol.minimumLength(s3))    #17
 print(sol.minimumLength(s4))    #12
-#✅✅✅
-
 
