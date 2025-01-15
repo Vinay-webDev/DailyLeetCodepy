@@ -1,4 +1,5 @@
 """14/01/25"""
+#Brute force💪😤🔥
 A1, B1 = [1,3,2,4], [3,1,2,4]
 A2, B2 = [2,3,1], [3,1,2]
 class Solution:
@@ -18,7 +19,7 @@ sol = Solution()
 print(sol.findThePrefixCommonArray(A1, B1)) #[0, 2, 3, 4]
 print(sol.findThePrefixCommonArray(A2, B2)) #[0, 1, 3]
 #✅✅✅✅
-
+#not efficient approach but it works
 
 
 

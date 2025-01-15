@@ -14,3 +14,10 @@ sol = Solution()
 print(sol.prefixCount(words1, pref1))   #2
 print(sol.prefixCount(words2, pref2))   #0
 
+
+
+
+
+
+
+
